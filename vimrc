@@ -1,55 +1,42 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if has("eval")
+    call plug#begin("~/.vim/bundle")
 
-" Bundles
-Plugin 'gmarik/Vundle.vim'
-Plugin 'bronson/vim-trailing-whitespace'
-" Plugin 'Command-T'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'localtag/vim-powerline'
-Plugin 'AutoTag'
-Plugin 'tpope/vim-fugitive'
-" Plugin 'scrooloose/syntastic'
-Plugin 'w0rp/ale'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'scrooloose/NERDTree'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'airblade/vim-gitgutter'
+    " Bundles
+    Plug 'bronson/vim-trailing-whitespace'
+    Plug 'ctrlpvim/ctrlp.vim'
+    " Plug 'localtag/vim-powerline'
+    Plug 'tpope/vim-fugitive'
+    Plug 'w0rp/ale'
+    Plug 'nathanaelkane/vim-indent-guides'
+    Plug 'scrooloose/NERDTree', { 'on': ['NERDTree', 'NERDTreeToggle', 'NERDTreeFocus', 'NERDTreeFind'] }
+    Plug 'editorconfig/editorconfig-vim'
+    Plug 'airblade/vim-gitgutter'
 
-" Colorschemes
-Plugin 'jnurmine/Zenburn'
-Plugin 'vim-scripts/Wombat'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Plugin 'wimstefan/Lightning'
-Plugin 'alexjgriffin/sprinkles'
+    " Colorschemes
+    Plug 'altercation/vim-colors-solarized'
 
-" Plugin 'unite.vim'
+    " Language plugins
+    Plug 'hdima/python-syntax'
+    Plug 'mako.vim'
+    Plug 'hynek/vim-python-pep8-indent'
+    Plug 'puppetlabs/puppet-syntax-vim'
+    Plug 'tpope/vim-markdown'
+    Plug 'rust-lang/rust.vim'
+    Plug 'django.vim'
+    Plug 'lunaru/vim-less'
+    Plug 'digitaltoad/vim-jade'
+    Plug 'kchmck/vim-coffee-script'
+    Plug 'xmledit'
+    Plug 'hashivim/vim-terraform'
+    Plug 'mfukar/robotframework-vim'
+    Plug 'mitsuhiko/vim-jinja'
 
-" Language plugins
-Plugin 'hdima/python-syntax'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'Haskell-Highlight-Enhanced'
-Plugin 'indenthaskell.vim'
-Plugin 'mako.vim'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'puppetlabs/puppet-syntax-vim'
-Plugin 'tpope/vim-markdown'
-Plugin 'rust-lang/rust.vim'
-Plugin 'django.vim'
-Plugin 'lunaru/vim-less'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'xmledit'
-Plugin 'hashivim/vim-terraform'
-Plugin 'mfukar/robotframework-vim'
-Plugin 'mattn/emmet-vim'
+    call plug#end()
+endif
 
-call vundle#end()
 filetype plugin indent on
 
 " Other configuration
