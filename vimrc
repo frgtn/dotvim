@@ -14,6 +14,8 @@ if has("eval")
     Plug 'scrooloose/NERDTree', { 'on': ['NERDTree', 'NERDTreeToggle', 'NERDTreeFocus', 'NERDTreeFind'] }
     Plug 'editorconfig/editorconfig-vim'
     Plug 'airblade/vim-gitgutter'
+    Plug 'sjl/gundo.vim'
+    let g:gundo_prefer_python3 = has('python3')
 
     " Colorschemes
     Plug 'altercation/vim-colors-solarized'
