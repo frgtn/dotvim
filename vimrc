@@ -16,6 +16,9 @@ if has("eval")
     Plug 'airblade/vim-gitgutter'
     Plug 'sjl/gundo.vim'
     let g:gundo_prefer_python3 = has('python3')
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    let g:airline_theme='solarized'
 
     " Colorschemes
     Plug 'altercation/vim-colors-solarized'
