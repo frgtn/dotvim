@@ -9,7 +9,9 @@ if has("eval")
     Plug 'ctrlpvim/ctrlp.vim'
     " Plug 'localtag/vim-powerline'
     Plug 'tpope/vim-fugitive'
-    Plug 'w0rp/ale'
+    if has('nvim') || has('timers') && exists('*job_start') && exists('*ch_close_in')
+        Plug 'w0rp/ale'
+    endif
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'scrooloose/NERDTree', { 'on': ['NERDTree', 'NERDTreeToggle', 'NERDTreeFocus', 'NERDTreeFind'] }
     Plug 'editorconfig/editorconfig-vim'
