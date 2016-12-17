@@ -32,8 +32,6 @@ if has("eval")
 
     " Colorschemes
     Plug 'altercation/vim-colors-solarized'
-    set background=light
-    colorscheme solarized
 
     " Language plugins
     Plug 'hdima/python-syntax'
@@ -58,6 +56,9 @@ filetype plugin indent on
 
 " Other configuration
 let maplocalleader=','
+
+set background=light
+colorscheme solarized
 
 set hidden
 set scrolloff=5
