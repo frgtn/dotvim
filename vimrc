@@ -21,9 +21,19 @@ if has("eval")
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     let g:airline_theme='solarized'
+    Plug 'honza/vim-snippets'
+    Plug 'SirVer/ultisnips'
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+    " If you want :UltiSnipsEdit to split your window.
+    let g:UltiSnipsEditSplit="vertical"
 
     " Colorschemes
     Plug 'altercation/vim-colors-solarized'
+    set background=light
+    colorscheme solarized
 
     " Language plugins
     Plug 'hdima/python-syntax'
@@ -74,9 +84,6 @@ set t_vb=
 set splitbelow
 set splitright
 
-set background=light
-colorscheme solarized
-
 set tags=./tags;$HOME
 
 " edit/view file in same directory
@@ -84,8 +91,6 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 map <leader>v :view %%
 
-" Powerline settings
-set laststatus=2
 set encoding=utf-8
 
 " Disable arrow keys
@@ -110,6 +115,9 @@ let g:CommandTMatchWindowAtTop=1
 " Allow JSX syntax in .js files
 let g:jsx_ext_required = 0
 
+
+" VIM-Airline settings
+set laststatus=2
 
 set statusline+=%#warningmsg#
 set statusline+=%{ALEGetStatusLine()}
