@@ -94,7 +94,12 @@ set encoding=utf-8
 " map <Up> <Nop>
 " map <Down> <Nop>
 
-" Language specific crap
+" Support mouse reporting in iTerm2
+if has('mouse_sgr')
+    set ttymouse=sgr
+endif
+
+" Language specific options
 autocmd FileType python setlocal sw=4 sts=4 et
 autocmd FileType ruby,haml,eruby,yams,sass,mako,mason,js,jade,coffee,scss,jsx,yaml setlocal ai sw=2 sts=2 et
 
