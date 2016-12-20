@@ -10,5 +10,5 @@ Clone and install plugins ::
 
     git clone https://github.com/frgtn/dotvim ~/.vim
     ~/.vim/install.sh
-    make -C ~/.vim
+    make -C ~/.vim install
 
