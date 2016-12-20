@@ -21,11 +21,13 @@ if has("eval")
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     let g:airline_theme='solarized'
-    Plug 'honza/vim-snippets'
-    Plug 'SirVer/ultisnips'
-    let g:UltiSnipsExpandTrigger="<tab>"
-    let g:UltiSnipsJumpForwardTrigger="<c-b>"
-    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+    if has('py3')
+        Plug 'honza/vim-snippets'
+        Plug 'SirVer/ultisnips'
+        let g:UltiSnipsExpandTrigger="<tab>"
+        let g:UltiSnipsJumpForwardTrigger="<c-b>"
+        let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+    endif
 
     " If you want :UltiSnipsEdit to split your window.
     let g:UltiSnipsEditSplit="vertical"
