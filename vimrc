@@ -51,6 +51,10 @@ if has("eval")
     Plug 'mfukar/robotframework-vim'
     Plug 'mitsuhiko/vim-jinja'
 
+    " Extras
+    Plug 'mgedmin/coverage-highlight.vim'
+    let g:coverage_script = 'env/bin/python3 -m coverage'
+
     call plug#end()
 endif
 
