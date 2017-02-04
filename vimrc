@@ -143,6 +143,10 @@ let g:ale_linters = {'python': ['flake8']}
 let g:ale_python_flake8_executable = 'python3'
 let g:ale_python_flake8_args = '-m flake8'
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+" Ignore some false positive errors that rustc returns when checking
+" as-you-type. Unfortunately not all errors can be ignored, see
+" https://github.com/rust-lang/rust/issues/39542
+let g:ale_rust_ignore_error_codes = ['E0432', 'E0433']
 
 autocmd BufReadPre,BufNewFile **/bolagsfakta/**/* let g:syntastic_javascript_checkers = ['eslint']
 autocmd BufReadPre,BufNewFile **/bolagsfakta/**/* let g:syntastic_javascript_eslint_exec = 'client/eslint'
