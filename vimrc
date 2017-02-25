@@ -30,6 +30,7 @@ if has("eval")
     endif
 
     Plug 'ludovicchabant/vim-gutentags'
+    let g:gutentags_ctags_executable_javascript = 'es-ctags'
 
     " If you want :UltiSnipsEdit to split your window.
     let g:UltiSnipsEditSplit="vertical"
