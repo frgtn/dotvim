@@ -142,9 +142,10 @@ let g:syntastic_python_flake8_exe = 'python3 -m flake8'
 let g:syntastic_python_python_exec = 'python3'
 
 " Ale!
-let g:ale_linters = {'python': ['flake8']}
+let g:ale_linters = {'python': ['flake8', 'mypy']}
 let g:ale_python_flake8_executable = 'python3'
 let g:ale_python_flake8_args = '-m flake8'
+let g:ale_python_mypy_options = '--ignore-missing-imports'
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 " Ignore some false positive errors that rustc returns when checking
 " as-you-type. Unfortunately not all errors can be ignored, see
