@@ -13,9 +13,15 @@ if has("eval")
         Plug 'w0rp/ale'
     endif
     Plug 'nathanaelkane/vim-indent-guides'
+
     Plug 'scrooloose/NERDTree', { 'on': ['NERDTree', 'NERDTreeToggle', 'NERDTreeFocus', 'NERDTreeFind'] }
+
     Plug 'editorconfig/editorconfig-vim'
     Plug 'airblade/vim-gitgutter'
+
+    Plug 'majutsushi/tagbar'
+    nmap <F8> :TagbarToggle<CR>
+
     Plug 'sjl/gundo.vim'
     let g:gundo_prefer_python3 = has('python3')
     Plug 'vim-airline/vim-airline'
