@@ -140,6 +140,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{ALEGetStatusLine()}
 set statusline+=%*
 
+" Open NERDTree if no file is selected
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree
+
 " Syntastic stuffs
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_open = 1
