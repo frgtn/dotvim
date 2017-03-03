@@ -144,13 +144,6 @@ set statusline+=%*
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree
 
-" Syntastic stuffs
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_python_checkers = ['python', 'flake8']
-let g:syntastic_python_flake8_exe = 'python3 -m flake8'
-let g:syntastic_python_python_exec = 'python3'
-
 " Ale!
 let g:ale_linters = {'python': ['flake8', 'mypy']}
 let g:ale_python_flake8_executable = 'python3'
@@ -161,11 +154,5 @@ let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 " as-you-type. Unfortunately not all errors can be ignored, see
 " https://github.com/rust-lang/rust/issues/39542
 let g:ale_rust_ignore_error_codes = ['E0432', 'E0433']
-
-autocmd BufReadPre,BufNewFile **/bolagsfakta/**/* let g:syntastic_javascript_checkers = ['eslint']
-autocmd BufReadPre,BufNewFile **/bolagsfakta/**/* let g:syntastic_javascript_eslint_exec = 'client/eslint'
-
-autocmd BufReadPre,BufNewFile **/manoseimas/**/* let g:syntastic_javascript_checkers = ['eslint']
-autocmd BufReadPre,BufNewFile **/manoseimas/**/* let g:syntastic_javascript_eslint_exec = './eslint'
 
 set updatetime=250  " faster CursorHold events for vim-gitgutter
