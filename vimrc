@@ -154,3 +154,6 @@ let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 let g:ale_rust_ignore_error_codes = ['E0432', 'E0433']
 
 set updatetime=250  " faster CursorHold events for vim-gitgutter
+
+" Identify Jenkinsifles as Groovy
+au BufNewFile,BufRead Jenkinsfile set filetype=groovy
