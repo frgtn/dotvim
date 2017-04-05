@@ -1,4 +1,6 @@
 set nocompatible
+let mapleader=','
+syntax enable
 filetype off
 
 if has("eval")
