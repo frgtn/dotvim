@@ -26,6 +26,8 @@ if has("eval")
 
     Plug 'sjl/gundo.vim'
     let g:gundo_prefer_python3 = has('python3')
+    nnoremap <leader>u :GundoToggle<CR>
+
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     let g:airline_theme='solarized'
@@ -70,7 +72,6 @@ endif
 filetype plugin indent on
 
 " Other configuration
-let maplocalleader=','
 
 set background=light
 colorscheme solarized
@@ -96,9 +97,11 @@ set nowrap
 set vb
 set noerrorbells  " No noise.
 set t_vb=
+set encoding=utf-8
 
 set splitbelow
 set splitright
+set incsearch
 
 set tags=./tags;$HOME
 
@@ -107,13 +110,9 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 map <leader>v :view %%
 
-set encoding=utf-8
-
-" Disable arrow keys
-" map <Left> <Nop>
-" map <Right> <Nop>
-" map <Up> <Nop>
-" map <Down> <Nop>
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>ez :vsp ~/.zshrc<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Support mouse reporting in iTerm2
 if has('mouse_sgr')
