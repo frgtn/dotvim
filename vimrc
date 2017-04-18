@@ -61,6 +61,7 @@ if has("eval")
     Plug 'mfukar/robotframework-vim'
     Plug 'mitsuhiko/vim-jinja'
     Plug 'pearofducks/ansible-vim'
+    Plug 'cespare/vim-toml'
 
     " Extras
     Plug 'mgedmin/coverage-highlight.vim'
