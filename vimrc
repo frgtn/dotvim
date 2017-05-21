@@ -11,6 +11,7 @@ if has("eval")
     Plug 'ctrlpvim/ctrlp.vim'
     " Plug 'localtag/vim-powerline'
     Plug 'tpope/vim-fugitive'
+    Plug 'junegunn/gv.vim'
     if has('nvim') || has('timers') && exists('*job_start') && exists('*ch_close_in')
         Plug 'w0rp/ale'
     endif
@@ -62,6 +63,7 @@ if has("eval")
     Plug 'mitsuhiko/vim-jinja'
     Plug 'pearofducks/ansible-vim'
     Plug 'cespare/vim-toml'
+    Plug 'leafgarland/typescript-vim'
 
     " Extras
     Plug 'mgedmin/coverage-highlight.vim'
