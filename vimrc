@@ -20,7 +20,7 @@ if has("eval")
     Plug 'scrooloose/NERDTree', { 'on': ['NERDTree', 'NERDTreeToggle', 'NERDTreeFocus', 'NERDTreeFind'] }
 
     Plug 'editorconfig/editorconfig-vim'
-    Plug 'airblade/vim-gitgutter'
+    " Plug 'airblade/vim-gitgutter'
 
     Plug 'majutsushi/tagbar'
     nmap <F8> :TagbarToggle<CR>
