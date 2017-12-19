@@ -14,6 +14,8 @@ if has("eval")
     Plug 'junegunn/gv.vim'
     if has('nvim') || has('timers') && exists('*job_start') && exists('*ch_close_in')
         Plug 'w0rp/ale'
+        nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+        nmap <silent> <C-j> <Plug>(ale_next_wrap)
     endif
     Plug 'nathanaelkane/vim-indent-guides'
 
