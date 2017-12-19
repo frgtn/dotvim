@@ -66,10 +66,12 @@ if has("eval")
     Plug 'pearofducks/ansible-vim'
     Plug 'cespare/vim-toml'
     Plug 'leafgarland/typescript-vim'
+    Plug 'martinda/Jenkinsfile-vim-syntax'
 
     " Extras
     Plug 'mgedmin/coverage-highlight.vim'
     let g:coverage_script = 'env/bin/python3 -m coverage'
+    Plug 'christianrondeau/vim-base64'
 
     call plug#end()
 endif
