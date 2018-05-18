@@ -66,6 +66,8 @@ if has("eval")
     Plug 'cespare/vim-toml'
     Plug 'leafgarland/typescript-vim'
     Plug 'martinda/Jenkinsfile-vim-syntax'
+    Plug 'tomlion/vim-solidity'
+    Plug 'isRuslan/vim-es6'
 
     " Extras
     Plug 'mgedmin/coverage-highlight.vim'
@@ -127,7 +129,7 @@ endif
 
 " Language specific options
 autocmd FileType python setlocal sw=4 sts=4 et
-autocmd FileType ruby,haml,eruby,yams,sass,mako,mason,js,jade,coffee,scss,jsx,yaml setlocal ai sw=2 sts=2 et
+" autocmd FileType ruby,haml,eruby,yams,sass,mako,mason,js,jade,coffee,scss,jsx,yaml setlocal ai sw=2 sts=2 et
 
 " CommandT settings
 set wildignore+=*.pyc,*.pyo,*.class,node_modules/*,*/node_modules/*,bower_components/*,env/*,venv/*,.env/*,*.egg-info,jspm_packages/*,report/*,deploy/env/*,eggs/*
@@ -163,3 +165,7 @@ set updatetime=250  " faster CursorHold events for vim-gitgutter
 
 " Identify Jenkinsifles as Groovy
 au BufNewFile,BufRead Jenkinsfile set filetype=groovy
+
+" Editorconfig options
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
