@@ -68,6 +68,7 @@ if has("eval")
     Plug 'martinda/Jenkinsfile-vim-syntax'
     Plug 'tomlion/vim-solidity'
     Plug 'isRuslan/vim-es6'
+    Plug 'towolf/vim-helm'
 
     " Extras
     Plug 'mgedmin/coverage-highlight.vim'
