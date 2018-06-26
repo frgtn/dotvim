@@ -58,7 +58,6 @@ if has("eval")
     Plug 'lunaru/vim-less'
     Plug 'digitaltoad/vim-jade'
     Plug 'kchmck/vim-coffee-script'
-    Plug 'xmledit'
     Plug 'hashivim/vim-terraform'
     Plug 'mfukar/robotframework-vim'
     Plug 'mitsuhiko/vim-jinja'
