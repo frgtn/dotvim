@@ -46,6 +46,7 @@ if has("eval")
 
     " Colorschemes
     Plug 'altercation/vim-colors-solarized'
+    Plug 'arcticicestudio/nord-vim'
 
     " Language plugins
     Plug 'hdima/python-syntax'
@@ -81,8 +82,9 @@ filetype plugin indent on
 
 " Other configuration
 
-set background=light
-colorscheme solarized
+let g:nord_uniform_status_lines = 1
+set background=dark
+colorscheme nord
 
 set hidden
 set scrolloff=5
@@ -134,6 +136,13 @@ autocmd FileType python setlocal sw=4 sts=4 et
 " CommandT settings
 set wildignore+=*.pyc,*.pyo,*.class,node_modules/*,*/node_modules/*,bower_components/*,env/*,venv/*,.env/*,*.egg-info,jspm_packages/*,report/*,deploy/env/*,eggs/*
 let g:CommandTMatchWindowAtTop=1
+
+" CtrlP settings
+" Ignore some folders and files for CtrlP indexing
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp\|node_modules\|venv\|env$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store\|.pyc$'
+  \ }
 
 " Allow JSX syntax in .js files
 let g:jsx_ext_required = 0

@@ -1,3 +1,4 @@
+set termguicolors
 set guifont=Hack:h12
 
 set guioptions-=m  "remove menu bar
