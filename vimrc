@@ -131,7 +131,7 @@ endif
 
 " Language specific options
 autocmd FileType python setlocal sw=4 sts=4 et
-" autocmd FileType ruby,haml,eruby,yams,sass,mako,mason,js,jade,coffee,scss,jsx,yaml setlocal ai sw=2 sts=2 et
+ autocmd FileType ruby,haml,eruby,yams,sass,mako,mason,js,jade,coffee,scss,jsx,yaml,typescript setlocal ai sw=2 sts=2 et
 
 " CommandT settings
 set wildignore+=*.pyc,*.pyo,*.class,node_modules/*,*/node_modules/*,bower_components/*,env/*,venv/*,.env/*,*.egg-info,jspm_packages/*,report/*,deploy/env/*,eggs/*
