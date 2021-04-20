@@ -52,6 +52,7 @@ if has("eval")
     Plug 'hdima/python-syntax'
     Plug 'mako.vim'
     Plug 'hynek/vim-python-pep8-indent'
+    Plug 'fisadev/vim-isort'
     Plug 'puppetlabs/puppet-syntax-vim'
     Plug 'tpope/vim-markdown'
     Plug 'rust-lang/rust.vim'
@@ -131,7 +132,7 @@ endif
 
 " Language specific options
 autocmd FileType python setlocal sw=4 sts=4 et
- autocmd FileType ruby,haml,eruby,yams,sass,mako,mason,js,jade,coffee,scss,jsx,yaml,typescript setlocal ai sw=2 sts=2 et
+autocmd FileType ruby,haml,eruby,yams,sass,mako,mason,js,jade,coffee,scss,jsx,yaml,typescript setlocal ai sw=2 sts=2 et
 
 " CommandT settings
 set wildignore+=*.pyc,*.pyo,*.class,node_modules/*,*/node_modules/*,bower_components/*,env/*,venv/*,.env/*,*.egg-info,jspm_packages/*,report/*,deploy/env/*,eggs/*
@@ -176,3 +177,6 @@ au BufNewFile,BufRead Jenkinsfile set filetype=groovy
 " Editorconfig options
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
+" Make sure isort does non-hanging multiline with trailing commas
+" https://pycqa.github.io/isort/docs/configuration/multi_line_output_modes/
+let g:vim_isort_config_overrides = { 'include_trailing_comma': 1, 'multi_line_output': 3}
