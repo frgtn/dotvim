@@ -83,8 +83,8 @@ filetype plugin indent on
 " Other configuration
 
 let g:nord_uniform_status_lines = 1
-set background=dark
-colorscheme nord
+set background=light
+colorscheme solarized
 
 set hidden
 set scrolloff=5
