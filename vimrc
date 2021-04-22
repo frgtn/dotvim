@@ -141,7 +141,7 @@ let g:CommandTMatchWindowAtTop=1
 " CtrlP settings
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp\|node_modules\|venv\|env$',
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp\|dist\|node_modules\|venv\|env$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store\|.pyc$'
   \ }
 
