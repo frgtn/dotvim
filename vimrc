@@ -32,7 +32,7 @@ if has("eval")
 
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    let g:airline_theme='solarized'
+    let g:airline_theme='onehalflight'
     if has('py3')
         Plug 'honza/vim-snippets'
         Plug 'SirVer/ultisnips'
@@ -47,6 +47,7 @@ if has("eval")
     " Colorschemes
     Plug 'altercation/vim-colors-solarized'
     Plug 'arcticicestudio/nord-vim'
+    Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
     " Language plugins
     Plug 'hdima/python-syntax'
@@ -84,8 +85,8 @@ filetype plugin indent on
 " Other configuration
 
 let g:nord_uniform_status_lines = 1
-set background=dark
-colorscheme nord
+set background=light
+colorscheme onehalflight
 
 set hidden
 set scrolloff=5
